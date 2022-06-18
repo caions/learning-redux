@@ -1,5 +1,9 @@
-import { createStore } from 'redux'
+import { createStore,combineReducers } from 'redux'
 
-import {reducer} from './cars'
+import { carsReducer } from './cars'
 
-export default createStore(reducer)
+const rootReducer = combineReducers({
+  cars: carsReducer
+})
+
+export default createStore(rootReducer)

@@ -16,7 +16,7 @@ const INITIAL_STATE = [
 	}
 ]
 
-export function reducer(state = INITIAL_STATE,action: any){
+export function carsReducer(state = INITIAL_STATE,action: any){
 
   return state
 
