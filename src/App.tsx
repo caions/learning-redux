@@ -1,12 +1,12 @@
-import './App.css'
+import { Layout } from './layout';
+import { Pages } from './pages';
 
-function App() {
+
+export const App:React.FC = () => {
 
   return (
-    <div className="App">
-      
-    </div>
-  )
+		<Layout>
+			<Pages />
+		</Layout>
+	);
 }
-
-export default App
