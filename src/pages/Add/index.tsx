@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { DashBoardContainer } from '../../containers/DashBoardContainer';
-import { addCar } from '../../redux/actions/carActions'
+import { addCar, ICar } from '../../redux/actions/carActions'
 
 export const Add = () => {
-	const [form, setForm] = useState({name:'',url:''})
+	const [form, setForm] = useState<ICar>({name:'',url:''})
 	const dispatch = useDispatch()
 
 	function formChange(e: React.ChangeEvent<HTMLInputElement>){
@@ -14,6 +14,7 @@ export const Add = () => {
 	function onSubmit(e: React.FormEvent<HTMLFormElement>){
 		e.preventDefault();
 		dispatch(addCar(form))
+		setForm({name:'',url:''});
 	}
 
 	return (
