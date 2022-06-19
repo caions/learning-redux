@@ -1,6 +1,6 @@
 import { createStore,combineReducers } from 'redux'
 
-import { carsReducer } from './carsReducer'
+import { carsReducer } from './reducers/carsReducer'
 
 const rootReducer = combineReducers({
   cars: carsReducer

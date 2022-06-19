@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { DashBoardContainer } from '../../containers/DashBoardContainer';
-
-
-import { addCar } from '../../store/carsReducer'
+import { addCar } from '../../redux/actions/carActions'
 
 export const Add = () => {
 	const [form, setForm] = useState({name:'',url:''})
