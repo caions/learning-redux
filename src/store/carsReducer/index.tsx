@@ -19,15 +19,16 @@ const INITIAL_STATE = [
 ]
 
 export function carsReducer(state = INITIAL_STATE,action: any){
-	if(action.type === cars.ADD_CAR){
-		return [...state, action.car]
-	}
+	switch (action.type) {
+		case cars.ADD_CAR:
+			return [...state, action.car]
 
-	if(action.type === cars.REMOVE_CAR){
-		return state.filter((st) => st.name !== action.car.name)
+		case cars.REMOVE_CAR:
+			return state.filter((st) => st.name !== action.car.name)
+	
+		default: 
+			return state
 	}
-
-  return state
 }
 
 interface ICar{
