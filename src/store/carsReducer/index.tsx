@@ -42,7 +42,7 @@ export const addCar = (car:ICar) => {
 	}
 }
 
-export const delCar = (car:any) => {
+export const delCar = (car:ICar) => {
 	return {
 		type: cars.REMOVE_CAR,
 		car

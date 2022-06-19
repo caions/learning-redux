@@ -3,17 +3,17 @@ import { useDispatch } from 'react-redux'
 import { DashBoard } from '../../layout/DashBoard';
 
 
-import { addCar,delCar } from '../../store/cars'
+import { addCar } from '../../store/carsReducer'
 
 export const Add = () => {
 	const [form, setForm] = useState({name:'',url:''})
 	const dispatch = useDispatch()
 
-	function formChange(e){
+	function formChange(e: React.ChangeEvent<HTMLInputElement>){
 		setForm({...form,[e.target.name]: e.target.value})
 	}
 
-	function onSubmit(e){
+	function onSubmit(e: React.FormEvent<HTMLFormElement>){
 		e.preventDefault();
 		dispatch(addCar(form))
 	}
