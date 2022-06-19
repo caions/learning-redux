@@ -1,6 +1,6 @@
 import * as cars from './actionsType/cars'
 
-interface ICar{
+export interface ICar{
 	name: string,
 	url: string
 }
