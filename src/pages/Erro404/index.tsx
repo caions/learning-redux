@@ -1,5 +1,5 @@
 import React from 'react';
-import { Authentication } from '../../layout/Authentication';
+import { Authentication } from '../../containers/AuthContainer';
 
 export const Erro404: React.FC = () => {
   return (

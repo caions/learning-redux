@@ -10,7 +10,7 @@ type Props = {
   children?: ReactNode
 };
 
-export const DashBoard = ({ children }: Props) => (
+export const DashBoardContainer = ({ children }: Props) => (
 	<>
 		<Header />
 		<Content>{children}</Content>

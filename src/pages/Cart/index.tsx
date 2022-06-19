@@ -1,10 +1,10 @@
 import React from 'react';
-import { DashBoard } from '../../layout/DashBoard';
+import { DashBoardContainer } from '../../containers/DashBoardContainer';
 
 export const Cart = () => {
 	return (
-		<DashBoard>
+		<DashBoardContainer>
 			<p className="mt-5 text-warning text-center">Sem produtos no Carrinho...</p>;
-		</DashBoard>
+		</DashBoardContainer>
 	)
 }

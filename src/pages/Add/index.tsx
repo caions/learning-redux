@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
-import { DashBoard } from '../../layout/DashBoard';
+import { DashBoardContainer } from '../../containers/DashBoardContainer';
 
 
 import { addCar } from '../../store/carsReducer'
@@ -19,7 +19,7 @@ export const Add = () => {
 	}
 
 	return (
-		<DashBoard>
+		<DashBoardContainer>
 			<form className="container mt-5" onSubmit={onSubmit}>
 				<div className="form-group">
 					<label>Nome</label>
@@ -33,6 +33,6 @@ export const Add = () => {
 					Adicionar
 				</button>
 			</form>
-		</DashBoard>
+		</DashBoardContainer>
 	);
 }
