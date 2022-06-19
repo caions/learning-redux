@@ -1,3 +1,5 @@
+import * as cars from '../actionsType/cars'
+
 const INITIAL_STATE = [
   {
 		name: 'Ferrari',
@@ -17,11 +19,11 @@ const INITIAL_STATE = [
 ]
 
 export function carsReducer(state = INITIAL_STATE,action: any){
-	if(action.type === 'ADD_CAR'){
+	if(action.type === cars.ADD_CAR){
 		return [...state, action.car]
 	}
 
-	if(action.type === 'REMOVE_CAR'){
+	if(action.type === cars.REMOVE_CAR){
 		return state.filter((st) => st.name !== action.car.name)
 	}
 
@@ -35,14 +37,14 @@ interface ICar{
 
 export const addCar = (car:ICar) => {
 	return {
-		type: 'ADD_CAR',
+		type: cars.ADD_CAR,
 		car
 	}
 }
 
 export const delCar = (car:any) => {
 	return {
-		type: 'REMOVE_CAR',
+		type: cars.REMOVE_CAR,
 		car
 	}
 }
