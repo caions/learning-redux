@@ -4,11 +4,11 @@ import { useSelector } from 'react-redux'
 
 export const List = () => {
 	
-	const cars = useSelector(state => state.cars)
+	const cars = useSelector(state => state)
 
 	return (
 		<div className="container-fluid">
-			<div className="row">{cars.map((car, index) => <Car key={index} car={car} />)}</div>
+			<div className="row">{cars.cars.map((car, index) => <Car key={index} car={car} />)}</div>
 		</div>
 	);
 }
